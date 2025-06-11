@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-production
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ivanht/minikube-argocd-local.git
+    targetRevision: HEAD
+    path: gitops/nginx/charts/
+    helm:
+      valueFiles:
+        - ../custom-values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: external-production
+  syncPolicy:
+    syncOptions:
+      - ManualSync=true
