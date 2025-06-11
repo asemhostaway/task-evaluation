@@ -47,7 +47,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ivanht/minikube-argocd-local.git
+    repoURL: https://github.com/asemhostaway/task-evaluation.git
     targetRevision: HEAD
     path: gitops/nginx/charts/
     helm:
@@ -71,7 +71,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ivanht/minikube-argocd-local.git
+    repoURL: https://github.com/asemhostaway/task-evaluation.git
     targetRevision: HEAD
     path: gitops/nginx/charts/
     helm:
